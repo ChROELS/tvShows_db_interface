@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--Title container-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-1">TV Shows db</h1>
+            <p>Looking to watch something new? We have listed 240 TV shows!</p>
+        </div>
+    </div>        
+    <!--Main container with a dark grey background and white text + padding and pargins 16px-->
+<div class="container-fluid p-3 my-3 bg-dark text-white" style="margin-bottom:0">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu1">Random Generator</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu2">Catalog</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu3">Search Engine</a>
+        </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <!--Home tab-->
+        <div class="tab-pane container active" id="home">
+            <!-- Grid layout 4/8 to make a menu-like display at the left side -->
+            <br/>
+            <div class="row">
+                <div class="col-sm-4">
+                    <p>Random Generator</p>
+                </div>
+                <div class="col-sm-8">
+                    <p>
+                       Display up to 3 suggestions at random...
+                    </p>
+                </div>
+            </div>    
+            <div class="row">
+                <div class="col-sm-4">
+                    <p>Catalog</p>
+                </div>
+                <div class="col-sm-8">
+                    <p>
+                         Browse the entire catalog...
+                    </p>     
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <p>Search Engine</p>
+                </div>
+                <div class="col-sm-8">
+                    <p>
+                        Search for specific genres, runtimes and/or keywords...
+                    </p>  
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="menu1">
+            <!--Random Generator Tab-->
+            <h2 class="p-3 mt-2">
+                Select how many TV shows to display
+            </h2>
+            <!--Form with three check input-->
+            <form class="p-5" action="#">
+                <div class="form-check-inline">
+                  <label class="form-check-label" for="radio1">
+                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>1
+                  </label>
+                </div>
+                <div class="form-check-inline">
+                  <label class="form-check-label" for="radio2">
+                    <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">2
+                  </label>
+                </div>
+                <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input">3
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            <!--Results as an Infos sheet-->
+            <div class="card" style="color: black;" id="cardShow1">
+                <div class="card-header">
+                    <h3 class="card-title">TV Shows infos sheet</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="card-title">id:</h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="card-title">Title:</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="card-title">Summary:</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="card-title">Language:</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h4 class="card-title">Genre(s):</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="col-sm-2">
+                                <p class="card-text">...</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="card-text">...</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="card-text">...</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="card-text">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="card-title">Status:</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="card-title">Runtime:</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="card-title">Premiered:</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="card-title">Average rating:</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="card-title">Network:</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h4 class="card-title">Links:</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <p class="card-text">...</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="card-title">imdb ref.:</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="card-title">tvrage ref.:</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="card-title">thetvdb ref.:</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>                            
+                </div>
+                <img class="img-fluid mx-auto d-block" src="TVShows_random_page_2.png" alt="Card image">
+                <div class="card-footer"><br/></div>
+            </div>
+            <!--End of card: results as infos sheet-->
+            <br/>
+            <div class="card" style="color: black;" id="cardShow2">
+                <div class="card-header">
+                    <h3 class="card-title">TV Shows infos sheet</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">id:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Title:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Summary:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Language:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h4 class="card-title">Genre(s):</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="col-sm-2">
+                                <p class="card-text">...</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="card-text">...</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="card-text">...</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="card-text">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Status:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Runtime:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Premiered:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Average rating:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Network:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Links:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">imdb ref.:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">tvrage ref.:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">thetvdb ref.:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>                            
+                </div>
+                <img class="img-fluid mx-auto d-block" src="TVShows_random_page_2.png" alt="Card image">
+                <div class="card-footer"><br/></div>
+            </div>
+            <br/>
+            <!--End of card: results as infos sheet-->
+            <div class="card" style="color: black;" id="cardShow3">
+                <div class="card-header">
+                    <h3 class="card-title">TV Shows infos sheet</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">id:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Title:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Summary:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Language:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h4 class="card-title">Genre(s):</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="col-sm-2">
+                                <p class="card-text">...</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="card-text">...</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="card-text">...</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="card-text">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Status:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Runtime:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Premiered:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Average rating:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Network:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">Links:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">imdb ref.:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">tvrage ref.:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4 class="card-title">thetvdb ref.:</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="card-text">...</p>
+                        </div>
+                    </div>                            
+                </div>
+                <img class="img-fluid mx-auto d-block" src="TVShows_random_page_2.png" alt="Card image">
+                <div class="card-footer"><br/></div>
+            </div>
+            <!--End of card: results as infos sheet-->
+        </div>
+        <div class="tab-pane container fade" id="menu2">
+            <!--Catalog Tab-->
+            <h2 class="p-3 mt-2">
+                Consult the entire catalog <small class="font-weight-lighter">Click on a title for more informations</small>
+            </h2>
+            <!--Table 6 columns-->            
+            <table class="table table-dark table-hover">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Runtime</th>
+                  <th>Genre(s)</th>
+                  <th>Summary</th>
+                  <th>Rating</th>
+                  <th>Link</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="row">
+                <!--Buttons to sort rows-->    
+                <div class="col-sm-3">
+                    <p class="text-right">Sort by runtimes:</p>
+                </div>
+                <div class="col-sm-3">
+                    <div class="btn-group-vertical">
+                        <button type="submit" class="btn btn-primary">Ascending</button>
+                        <button type="submit" class="btn btn-primary">Descending</button>
+                    </div>
+                </div>
+                <!--Buttons to navigate through rows-->
+                <div class="col-sm-3">
+                    <p class="text-right">Navigate:</p>
+                </div>
+                <div class="col-sm-3">
+                    <div class="btn-group-vertical">
+                        <button type="submit" class="btn btn-primary">Previous</button>
+                        <button type="submit" class="btn btn-primary">Next</button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div class="tab-pane container fade" id="menu3">
+            <!--Search Engine Tab-->
+            <h2 class="p-3 mt-2">
+                Enter your preferences <small class="font-weight-lighter">to explore the database</small>
+            </h2>
+            <!--input forms with a validation process before submission-->
+            <form action="#" class="was-validated">
+                <div class="form-group">
+                    <label for="genre">Genre:</label>
+                    <input type="text" class="form-control" placeholder="Enter one genre of your choice" minlength=4 maxlength=183 id="genre">
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Maximum text length is 183 characters and minimum length is 4.</div>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label" for="mixedGenre">
+                    <input class="form-check-input" type="checkbox" id="mixedGenre">Show of mixed genres: this genre of your choice + up to 3 others genres
+                </div>
+                    <div class="form-group">
+                    <label for="runtimeMin">Minimum runtime:</label>
+                    <input type="number" class="form-control" placeholder="Enter minimum runtime of your choice" min=25 max=120 step=10 id="runtimeMin" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">A number is required.</div>    
+                </div>
+                <div class="form-group">
+                    <label for="runtimeMax">Maximum runtime:</label>
+                    <input type="number" class="form-control" placeholder="Enter maximum runtime of your choice" min=25 max=120 step=10 id="runtimeMax" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">A number is required.</div> 
+                </div>
+                <div class="form-group">
+                    <label for="keyword">Keyword in summary:</label>
+                    <input type="text" class="form-control" placeholder="Enter one keyword of your choice" minlength=2 maxlength=183 id="keyword">
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Maximum text length is 183 characters and minimum is 2 characters.</div>
+                </div>
+                <!--Buttons-->
+                <div class="row">
+                    <div class="btn-group">
+                        <div class="col-sm-6">
+                            <button type="submit" class="btn btn-primary">Clear</button>
+                        </div>
+                        <div class="col-sm-6">  
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>    
+        </div>
+    </div>  
+</div>
+<div class="jumbotron jumbotron-fluid text-center" style="margin-top:0">
+    <p>Footer</p>
+  </div>
+</body>
+</html>
