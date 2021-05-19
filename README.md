@@ -15,6 +15,9 @@ Afterwards, I described in text the functionalities and made a first sketch of t
 
 Front-end:
 
-Implementation follows my first sketched ideas from the design-phase and is based on what offers Bootstrap 4 as possibilities.
+Implementation follows my first sketched ideas from the design-phase and is based on what offers Bootstrap 4 as possibilities. Work in progress...
 
-Work in progress...
+Back-End:
+
+I use Spring Boot and a DAO pattern to connect the database running on a localhost and querying the collection (read operations).
+For the TvShowsDAOImpl class, I have learned how to use a mongoDb driver for Java and to query the collection to retrieve documents we need.
